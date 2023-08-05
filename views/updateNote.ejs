@@ -1,0 +1,26 @@
+<%- include("./partials/header.ejs") %>
+<div class="w-100 h-100">
+  <form
+    class="mt-4 w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+    action="/update/<%= user._id %>" method="post">
+    <nav class="w-100 d-flex justify-content-between">
+      <div>
+        <div class="d-flex">
+          <i class="ri-arrow-left-line fs-2"></i>
+          <h1>LOGO</h1>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-lg">PUBLISH
+      </button>
+    </nav>
+    <input value="<%= user.title %>" class="form-control" type="text" placeholder="title" name="title" />
+    <textarea
+      class="form-control w-50 h-75 mt-5"
+      name="txtArea"
+      id=""
+      cols="30"
+      rows="10"
+    ><%= user.txtArea %></textarea>
+  </form>
+</div>
+<%- include("./partials/footer.ejs") %>

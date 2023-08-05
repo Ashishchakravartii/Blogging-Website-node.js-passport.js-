@@ -1,0 +1,15 @@
+
+   <%- include("./partials/header.ejs") %>
+   <%- include("./partials/nav.ejs") %>
+   <div class="w-100 h-100 d-flex flex-column pt-5 align-items-center">
+  <% posts.forEach((post)=>{ %> 
+     <div class="d-flex w-50 mt-2  bg-danger justify-content-center ">
+      <a class="w-100 text-decoration-none text-dark" href="/update/<%= post._id %>">
+       <h3 class=""><%= post.title %></h3>
+       <div><a class="text-dark text-decoration-none" href="/deletePost/<%= post._id %>"><i class="ri-delete-bin-7-fill"></i></a></div>
+       </a>
+     </div>
+     <% }) %>
+    </div>
+   <%- include("./partials/footer.ejs") %>
+  
