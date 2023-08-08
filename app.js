@@ -6,7 +6,14 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+const passport= require("passport");
+const postModel = require("./models/postModel")
+const userModel = require("./models/userModel")
+const session = require("express-session");
+
 require("./models/blogger")
+
 var app = express();
 
 // view engine setup
@@ -18,6 +25,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// passport boilder plate
+
+app.use(session({
+  saveUninitialized:false,
+  resave:false,
+  secret:"gyfytfgv"
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.serializeUser(userModel.serializeUser());
+passport.deserializeUser(userModel.deserializeUser());
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -1,15 +1,28 @@
-
-   <%- include("./partials/header.ejs") %>
-   <%- include("./partials/nav.ejs") %>
-   <div class="w-100 h-100 d-flex flex-column pt-5 align-items-center">
-  <% posts.forEach((post)=>{ %> 
-     <div class="d-flex w-50 mt-2  bg-danger justify-content-center ">
-      <a class="w-100 text-decoration-none text-dark" href="/update/<%= post._id %>">
-       <h3 class=""><%= post.title %></h3>
-       <div><a class="text-dark text-decoration-none" href="/deletePost/<%= post._id %>"><i class="ri-delete-bin-7-fill"></i></a></div>
-       </a>
-     </div>
-     <% }) %>
+<%- include("./partials/header.ejs") %> <%- include("./partials/nav.ejs") %>
+<div class="w-100 h-100 d-flex flex-column pt-5 align-items-center">
+  <% posts.forEach((post)=>{ %>
+  <div class="contentBox d-flex  mt-5 p-4 rounded-2 border">
+    <div class="firstLet">
+       <% let= firstCharacter = post.title.charAt(0); %>
+       <h1 class=""><%= firstCharacter %></h1>
     </div>
-   <%- include("./partials/footer.ejs") %>
-  
+    <div class="d-flex  w-75 ms-5">
+      <a
+        class="w-100 text-decoration-none text-dark"
+        href="/update/<%= post._id %>"
+      >
+        <h5 class="mt-1 text-secondary"><%= post.title %></h5>
+        <h6 class="mt-1 text-secondary">Published</p>
+</h6>
+        <div>
+          <a
+            class="text-secondary text-decoration-none"
+            href="/deletePost/<%= post._id %>"
+            ><i class="ri-delete-bin-6-line"></i></a>
+        </div>
+      </a>
+    </div>
+  </div>
+  <% }) %>
+</div>
+<%- include("./partials/footer.ejs") %>

@@ -8,10 +8,12 @@ body{
   width: 100%;
   height: 100%;
 }
+
 .sideCard{
   width: 20%;
   height: 100%;
-  background-color: gray;
+  background-color: rgba(255, 255, 255, 0.934);
+  box-shadow: 0 0 15px 0.1px rgb(214, 212, 212);
   position: absolute;
   top: 0;
   left: 0;
@@ -24,5 +26,55 @@ nav{
   width: 100vw;
 }
 .menu{
-  color: red;
+  color: black;
+}
+.f1{
+  font-family: 'Libre Franklin', sans-serif;
+}
+.f2{
+  font-family: 'Great Vibes', cursive;
+}
+.head-main{
+  letter-spacing: -1vmin;
+  line-height: 16vmin;
+  text-align: center;
+  font-size: 9vmax;
+  
+}
+.head-main-h2{
+  font-size: 4vmax;
+  text-align: center;
+
+}
+.createBtn{
+  margin-top: 5vmax;
+  margin-left: 1vmax;
+  margin-left: 6vmax;
+  margin-top: 6vmax;
+  
+}
+.createBtn a{
+  font-family: "Roboto";
+  font-size: 0.9vmax;
+
+}
+.contentBox{
+  margin-left: 15vmax;
+  height: 6.5vmax;
+  width: 60vmax;
+}
+.firstLet{
+  border: 0.1px solid rgb(222, 218, 218);
+  width: 5vmax;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vmax;
+}
+.firstLet h1{
+  font-family:serif;
+  font-weight: 600;
+  color: #78909C;
+  font-size: 3.5vmax;
 }

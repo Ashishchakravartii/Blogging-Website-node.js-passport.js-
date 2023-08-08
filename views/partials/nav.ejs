@@ -1,17 +1,49 @@
-
- <div class="sideCard">
-      <button class="mt-5 btn btn-lg"><a class="text-decoration-none text-dark" href="/create">+ NEW POST</a></button>
-    </div>
-    <nav>
-    <div class="d-flex justify-content-between">
-        <div class="d-flex">
-          <i class="ri-menu-line fs-2 menu"></i>
-          <h1>LOGO</h1>
-        </div>
-        <form action="">
-          <input type="text" placeholder="Search" name="search" />
-          <button><i class="ri-search-line"></i></button>
-        </form>
-        <div></div>
+<div class="sideCard">
+  <div class="border-top-0 border-end-0 border border-2 shadow h-25">
+    <button class="createBtn btn btn-sm bg-dark rounded-pill">
+      <a class="text-decoration-none text-light" href="/create">+ NEW POST</a>
+    </button>
+  </div>
+  <div class="h-75">
+    <div class="h-50"></div>
+    <div class="h-50 d-flex justify-content-between p-2 align-items-end">
+      <div class="form-check form-switch ">
+        <input
+          class="form-check-input darkMode"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label " for="flexSwitchCheckDefault"
+          >Dark Mode</label
+        >
       </div>
-    </nav>
+      <button class="btn btn-sm btn-dark">
+        <a class="text-light text-decoration-none" href="/signout">Log-Out</a>
+      </button>
+    </div>
+  </div>
+</div>
+<nav>
+  <div class="d-flex justify-content-between">
+    <div class="d-flex align-items-center gap-3 ps-2">
+      <i class="ri-menu-line fs-2 menu logo"></i>
+      <a class="text-decoration-none text-dark d-flex" href="/">
+        <h3 class="f2 mt-3 logo"><strong>InkVibes</strong></h3>
+      </a>
+    </div>
+    <form class="form-inline d-flex align-items-center w-75 p-3" action="">
+      <input
+        class="form-control w-50 bg-dark-subtle p-2"
+        type="text"
+        placeholder="Search"
+        name="search"
+      />
+      <button
+        class="form-control-sm border-0 ms-3 rounded-circle bg-dark-subtle"
+      >
+        <i class="ri-search-line"></i>
+      </button>
+    </form>
+  </div>
+</nav>

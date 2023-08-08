@@ -1,0 +1,20 @@
+ <%- include("./partials/header.ejs") %>
+ <div class="w-100  d-flex justify-content-between p-4 fixed-top">
+         <h3 class="f2"><strong><a class="text-decoration-none text-dark" href="/">InkVibes</a></strong></h3>
+         <div>
+          <h6><strong>ABOUT</strong></h6>
+          <h6><a class="text-decoration-none text-dark" href="/signin"><strong>Sign-in</strong></a></h6>
+          
+        </div>
+      </div>
+      <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+      <form class="text-align-center d-flex flex-column w-50 d-flex justify-content-center align-items-center gap-3" action="/signup" method="post">
+        <input required class=" form-control w-50 border text-dark " type="text" placeholder="FULL NAME" name="fullname">
+        <input required class="border  form-control w-50" type="text" placeholder="USERNAME" name="username">
+        <input required class="border  form-control w-50" type="email" placeholder="Example123@gmail.com" name="email">
+        <input required class="border  form-control w-50" type="password" placeholder="********" name="password">
+        <h6 class="w-50"><input  checked required type="checkbox" name="checkbox" id=""> "By checking this box, I agree to the Terms and Conditions."</h6>
+        <button class="btn btn-lg bg-dark text-light w-50">Sign-Up</button>
+        <h6>Already have an account? <a class="text-decoration-none" href="/signin">SignIn </a> </h6>
+      </form>
+      </div>
